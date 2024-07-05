@@ -69,7 +69,18 @@ export default function Home() {
           </div>
           <div className="">
             <Link href="https://maps.app.goo.gl/kmYxFuWQSJdprgvN6" isExternal>
-              <Button color="primary" startContent={<LocationIcon />}>
+              <Button
+                color="primary"
+                startContent={
+                  <LocationIcon
+                    filled={undefined}
+                    size={undefined}
+                    height={undefined}
+                    width={undefined}
+                    label={undefined}
+                  />
+                }
+              >
                 Como llegar
               </Button>
             </Link>
