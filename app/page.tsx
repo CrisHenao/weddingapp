@@ -1,113 +1,100 @@
+"use client";
+
+import { url } from "inspector";
 import Image from "next/image";
+import { Parallax } from "react-scroll-parallax";
+import BgMain from "../public/images/mainphoto.jpg";
+import BugaHotel from "../public/images/hotelbuga.jpg";
+import { Button, Link } from "@nextui-org/react";
+import { LocationIcon } from "../public/svg/Location";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="">
+      <section className="main-section">
+        <div
+          style={{
+            backgroundImage: `url(${BgMain.src})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+          className="h-screen w-full flex flex-col items-center justify-between"
+        >
+          <div className="mt-4">
+            <h3 className="font-semibold text-2xl">Nos casamos</h3>
+          </div>
+          <div className="flex flex-col justify-center items-center">
+            <h1 className="font-bold text-5xl great-vibes-regular">
+              Yosef & Keter
+            </h1>
+            <h2 className="font-normal text-4xl">05&middot;01&middot;2025</h2>
+          </div>
+          <div>
+            <h4>Normal</h4>
+          </div>
         </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+      </section>
+      {/* Secccion para un mensaje hacia los invitados */}
+      <Parallax>
+        <section
+          className="bg-white p-8 text-center"
+          style={{ marginTop: "-20px" }}
         >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
+          <h2 className="text-black font-bold text-3xl">Mensaje lindo !</h2>
+          <p className="text-black text-justify pt-6">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
+            numquam accusantium porro nam aut nemo accusamus laborum animi autem
+            quibusdam odit. Magni quaerat nesciunt culpa, nostrum amet excepturi
+            quo tempore.
           </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
+        </section>
+      </Parallax>
+      {/* Seccion para la ubicacion del evento y el listado de precios que tendrá el Hotel para el día de la boda */}
+      <section className="w-full flex flex-col items-center mt-12 px-8 pb-12">
+        <h1 className="font-bold text-4xl great-vibes-regular">Ubicación</h1>
+        <div className="flex flex-col justify-center items-center gap-8">
+          <h2 className="mt-12 font-semibold text-2xl text-center">
+            Hotel Guadalajara de Buga
           </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
+          <Image
+            src={BugaHotel}
+            alt="Fotografia del hotel guadalajara de buga"
+            width={250}
+            height={300}
+            className="rounded-full aspect-square object-cover"
+          />
+          <div className="text-center">
+            <h5>CALLE 1 #13 - 33</h5>
+            <h5>BUGA - VALLE - COLOMBIA</h5>
+          </div>
+          <div className="">
+            <Link href="https://maps.app.goo.gl/kmYxFuWQSJdprgvN6" isExternal>
+              <Button color="primary" startContent={<LocationIcon />}>
+                Como llegar
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+      {/* Seccion para el tema del hospedaje */}
+      <section className="bg-white p-8">
+        <div className="flex flex-col gap-12">
+          <h2 className="font-bold text-4xl great-vibes-regular text-black text-center">
+            Informacion de Hospedaje
           </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
+          <p className="text-black">
+            Te recomendamos que te quedes en el Hotel, aquí estarás mas comodo
+            despues de la celebración. AJUSTAR MENSAJE...
           </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        </div>
+        <div></div>
+      </section>
+      {/* Seccion para la parte de la confirmacion de la boda */}
+      <section></section>
+      {/* Seccion para el contador de la boda */}
+      <section></section>
+      {/* Seccion para el dress code */}
+      <section></section>
     </main>
   );
 }
