@@ -15,6 +15,12 @@ import {
   ModalHeader,
   ModalBody,
   useDisclosure,
+  Table,
+  TableHeader,
+  TableColumn,
+  TableBody,
+  TableRow,
+  TableCell,
 } from "@nextui-org/react";
 import { LocationIcon } from "../public/svg/Location";
 import { Invitacion, invitaciones } from "../public/data/InformacionInvitados";
@@ -110,38 +116,47 @@ export default function Home() {
               className="h-screen w-full flex flex-col items-center justify-between"
             >
               <div className="mt-4">
-                <h3 className="font-semibold text-2xl">Nos casamos</h3>
+                <h3 className="font-semibold text-2xl text-white">
+                  Nos casamos
+                </h3>
               </div>
               <div className="flex flex-col justify-center items-center">
-                <h1 className="font-bold text-5xl great-vibes-regular">
+                <h1 className="font-bold text-5xl great-vibes-regular text-white">
                   Yosef & Keter
                 </h1>
-                <h2 className="font-normal text-4xl">
+                <h2 className="font-normal text-4xl text-white">
                   05&middot;01&middot;2025
                 </h2>
               </div>
               <div>
-                <h4>Normal</h4>
+                <h4>.</h4>
               </div>
             </div>
           </section>
           {/* Secccion para un mensaje hacia los invitados */}
-          <Parallax>
-            <section
-              className="bg-white p-8 text-center"
-              style={{ marginTop: "-20px" }}
-            >
-              <h2 className="text-black font-bold text-3xl great-vibes-regular">
-                {info.mainName}
-              </h2>
-              <p className="text-black text-justify pt-6">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Pariatur, numquam accusantium porro nam aut nemo accusamus
-                laborum animi autem quibusdam odit. Magni quaerat nesciunt
-                culpa, nostrum amet excepturi quo tempore.
-              </p>
-            </section>
-          </Parallax>
+          <section
+            className="bg-white p-8 text-center"
+            style={{ marginTop: "-20px" }}
+          >
+            <h2 className="text-black font-bold text-3xl great-vibes-regular">
+              {info.mainName}
+            </h2>
+            <p className="text-black text-justify pt-6">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
+              numquam accusantium porro nam aut nemo accusamus laborum animi
+              autem quibusdam odit. Magni quaerat nesciunt culpa, nostrum amet
+              excepturi quo tempore.
+            </p>
+            <h5 className="font-semibold mt-4">
+              Invitación válida para {info.guestsNumber}{" "}
+              {info.guestsNumber > 1 ? "personas." : "persona."}
+            </h5>
+            <h5 className="font-light mt-4">
+              {info.codeToEnter == 8388
+                ? "Ohad Ben Osher, recuerda que tú leerás la Ketuvah. Así que prepara tu voz y ahí nos vemos."
+                : ""}
+            </h5>
+          </section>
           {/* Seccion para la ubicacion del evento y el listado de precios que tendrá el Hotel para el día de la boda */}
           <section className="w-full flex flex-col items-center mt-12 px-8 pb-12">
             <h1 className="font-bold text-4xl great-vibes-regular">
@@ -168,6 +183,7 @@ export default function Home() {
                   isExternal
                 >
                   <Button
+                    variant="shadow"
                     color="primary"
                     startContent={
                       <LocationIcon
@@ -193,13 +209,98 @@ export default function Home() {
               </h2>
               <p className="text-black">
                 Te recomendamos que te quedes en el Hotel, aquí estarás mas
-                comodo despues de la celebración. AJUSTAR MENSAJE...
+                comodo despues de la celebración.
               </p>
             </div>
-            <div></div>
+            <div className="mt-8">
+              <Table>
+                <TableHeader>
+                  <TableColumn>.</TableColumn>
+                  <TableColumn>Sencilla</TableColumn>
+                  <TableColumn>Doble</TableColumn>
+                  <TableColumn>Triple</TableColumn>
+                  <TableColumn>Cuádruple</TableColumn>
+                </TableHeader>
+                <TableBody>
+                  <TableRow>
+                    <TableCell>Estándar</TableCell>
+                    <TableCell>$270.000</TableCell>
+                    <TableCell>$309.000</TableCell>
+                    <TableCell>$359.500</TableCell>
+                    <TableCell>$479.000</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>Junior Suite</TableCell>
+                    <TableCell>$328.000</TableCell>
+                    <TableCell>$391.000</TableCell>
+                    <TableCell>NA</TableCell>
+                    <TableCell>NA</TableCell>
+                  </TableRow>
+                  {/* <TableRow key="1">
+                    <TableCell>Estándar</TableCell>
+                    <TableCell>Junior Suite</TableCell>
+                  </TableRow>
+                  <TableRow key="2">
+                    <TableCell>$270.000</TableCell>
+                    <TableCell>$328.000</TableCell>
+                  </TableRow>
+                  <TableRow key="3">
+                    <TableCell>$309.000</TableCell>
+                    <TableCell>$391.000</TableCell>
+                  </TableRow>
+                  <TableRow key="4">
+                    <TableCell>$359.500</TableCell>
+                    <TableCell>NA</TableCell>
+                  </TableRow>
+                  <TableRow key="5">
+                    <TableCell>$479.000</TableCell>
+                    <TableCell>NA</TableCell>
+                  </TableRow> */}
+                </TableBody>
+              </Table>
+              <p className="font-light mt-4 text-center">
+                <strong>Incluye:</strong> desayuno en la terraza de la piscina.
+                Disfrutar de los servicios del Hotel, piscina semiolímpica,{" "}
+                <strong>Nota:</strong> SPA y salón de belleza (costo adicional).
+                <br />
+                El día hotelero inicia a las 3:00 p.m. y finaliza a la 1:00 p.m.
+                No incluye seguro hotelero $7.000 por persona por noche y es
+                opcional del huésped asumirlo. <br />
+                <strong>
+                  Requiere reserva previa y depósito para garantía del 50%.
+                </strong>
+                <br />
+                Tarifas aplican únicamente para los asistentes al evento
+              </p>
+            </div>
+            <div className="text-center mt-8">
+              <h3 className="font-semibold">
+                Contacto departamento de reservas.
+              </h3>
+              <h4>Teléfono: +57 2 2362611</h4>
+              <h4>Celular: +57 317 638 8417</h4>
+              <h4>Email: reservas@hotelguadalajara.com.co</h4>
+            </div>
           </section>
           {/* Seccion para la parte de la confirmacion de la boda */}
-          <section></section>
+          <section className="p-8 flex flex-col justify-center">
+            <h2 className="font-bold text-4xl great-vibes-regular text-black text-center">
+              Confirmación de asistencia.
+            </h2>
+            <p className="mt-8 text-center font-light">
+              Para nosotros es muy importante que confirmes esta invitación,
+              para saber si contamos con tu especial compañía.
+            </p>
+            <Link
+              href="https://forms.gle/ojutY3tup1bzSHNp8"
+              isExternal
+              className="w-full"
+            >
+              <Button color="primary" variant="shadow" className="mt-8 w-full">
+                Confirma por formulario
+              </Button>
+            </Link>
+          </section>
           {/* Seccion para el contador de la boda */}
           <section></section>
           {/* Seccion para el dress code */}
