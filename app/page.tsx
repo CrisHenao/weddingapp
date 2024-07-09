@@ -6,6 +6,8 @@ import { Parallax } from "react-scroll-parallax";
 import BgMain from "../public/images/mainphoto.jpg";
 import BgInvitation from "../public/images/invitationimage.jpg";
 import BugaHotel from "../public/images/hotelbuga.jpg";
+import DressCodeMan from "../public/images/etiquetaformalman.png";
+import DressCodeWomen from "../public/images/etiquetaformalwomen.png";
 import {
   Button,
   Link,
@@ -25,6 +27,7 @@ import {
 import { LocationIcon } from "../public/svg/Location";
 import { Invitacion, invitaciones } from "../public/data/InformacionInvitados";
 import { useState } from "react";
+import Countdown from "./Countdown";
 
 export default function Home() {
   const [code, setCode] = useState("");
@@ -302,9 +305,44 @@ export default function Home() {
             </Link>
           </section>
           {/* Seccion para el contador de la boda */}
-          <section></section>
+          <section className="p-8 flex flex-col justify-center">
+            <h2 className="font-bold text-4xl great-vibes-regular text-black text-center">
+              Contador para el gran día.
+            </h2>
+            <div className="mt-12">
+              <Countdown targetDate="2025-01-05T16:59:59" />
+            </div>
+          </section>
           {/* Seccion para el dress code */}
-          <section></section>
+          <section className="p-8 flex flex-col justify-center items-center">
+            <h2 className="font-bold text-4xl great-vibes-regular text-black text-center">
+              Código de vestimenta
+            </h2>
+            <div className="mt-8 w-3/4 border rounded-full aspect-square object-cover flex flex-col justify-center items-center">
+              <Image
+                src={DressCodeMan}
+                alt="Fotografia del hotel guadalajara de buga"
+                width={250}
+                height={300}
+                className=""
+              />
+            </div>
+            <div className="mt-8 w-3/4 border rounded-full aspect-square object-cover flex flex-col justify-center items-center">
+              <Image
+                src={DressCodeWomen}
+                alt="Fotografia del hotel guadalajara de buga"
+                width={250}
+                height={300}
+                className=""
+              />
+            </div>
+            <h2 className="mt-12 font-semibold text-2xl text-center">
+              Tipo de etiqueta:
+            </h2>
+            <h2 className="mt-2 font-semibold text-2xl text-center great-vibes-regular">
+              Formal
+            </h2>
+          </section>
         </section>
       )}
       <Modal isOpen={isOpen} onOpenChange={onOpenChange} placement="center">
@@ -318,6 +356,25 @@ export default function Home() {
           </ModalBody>
         </ModalContent>
       </Modal>
+      <footer className="bg-black h-1/2 flex flex-col justify-center items-center p-8">
+        <p className="text-white text-center great-vibes-regular">
+          Esperamos contar con tu participación en este gran día.
+        </p>
+        <p className="text-white text-center great-vibes-regular mt-4">
+          Cualquier información adicional con respecto a la boda, a continuación
+          aparecen los numeros de contacto de los novios:
+        </p>
+        <h6 className="text-white text-center great-vibes-regular mt-4">
+          Novio
+        </h6>
+        <h5 className="text-white text-center mt-2">
+          Celular: +57 310 415 7860
+        </h5>
+        <h6 className="text-white text-center great-vibes-regular mt-4">
+          Novia
+        </h6>
+        <h5 className="text-white text-center mt-2">Celular: +502 5595 9443</h5>
+      </footer>
     </main>
   );
 }
