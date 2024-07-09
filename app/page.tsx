@@ -8,6 +8,8 @@ import BgInvitation from "../public/images/invitationimage.jpg";
 import BugaHotel from "../public/images/hotelbuga.jpg";
 import DressCodeMan from "../public/images/etiquetaformalman.png";
 import DressCodeWomen from "../public/images/etiquetaformalwomen.png";
+import FloralDividerTop from "../public/images/divider/floral.png";
+import FloralDividerBottom from "../public/images/divider/floralbottom.png";
 import {
   Button,
   Link,
@@ -122,7 +124,7 @@ export default function Home() {
               className="h-screen w-full flex flex-col items-center justify-between"
             >
               <div className="mt-4">
-                <h3 className="font-semibold text-2xl text-white">
+                <h3 className="font-semibold text-2xl text-white great-vibes-regular">
                   Nos casamos
                 </h3>
               </div>
@@ -141,10 +143,11 @@ export default function Home() {
           </section>
           {/* Secccion para un mensaje hacia los invitados */}
           <section
-            className="bg-white p-8 text-center bg-[#275f7a] text-white"
+            className="p-8 text-center bg-[#275f7a] text-white flex flex-col items-center"
             style={{ marginTop: "-20px" }}
           >
-            <h2 className="text-black font-bold text-3xl great-vibes-regular text-white">
+            <Image src={FloralDividerTop} alt="Divisor con imagen de flores" />
+            <h2 className="text-black font-bold text-3xl great-vibes-regular text-white mt-8">
               {info.mainName}
             </h2>
             <p className="text-black text-justify pt-6 text-white">
@@ -157,11 +160,15 @@ export default function Home() {
               Invitación válida para {info.guestsNumber}{" "}
               {info.guestsNumber > 1 ? "personas." : "persona."}
             </h5>
-            <h5 className="font-light mt-4">
+            <h5 className="font-light mt-4 text-white mb-8">
               {info.codeToEnter == 8388
                 ? "Ohad Ben Osher, recuerda que tú leerás la Ketuvah. Así que prepara tu voz y ahí nos vemos."
                 : ""}
             </h5>
+            <Image
+              src={FloralDividerBottom}
+              alt="Divisor con imagen de flores"
+            />
           </section>
           {/* Seccion para la ubicacion del evento y el listado de precios que tendrá el Hotel para el día de la boda */}
           <section className="w-full flex flex-col items-center mt-12 px-8 pb-12">
@@ -308,13 +315,17 @@ export default function Home() {
             </Link>
           </section>
           {/* Seccion para el contador de la boda */}
-          <section className="p-8 flex flex-col justify-center bg-[#275f7a] text-white">
+          <section className="p-8 flex flex-col justify-center bg-[#275f7a] text-white items-center">
             <h2 className="font-bold text-4xl great-vibes-regular text-black text-center text-white">
               Contador para el gran día.
             </h2>
-            <div className="mt-12">
+            <div className="mt-12 mb-8">
               <Countdown targetDate="2025-01-05T16:59:59" />
             </div>
+            <Image
+              src={FloralDividerBottom}
+              alt="Divisor con imagen de flores"
+            />
           </section>
           {/* Seccion para el dress code */}
           <section className="p-8 flex flex-col justify-center items-center">
@@ -339,31 +350,24 @@ export default function Home() {
                 className=""
               />
             </div>
-            <h2 className="mt-12 font-semibold text-2xl text-center">
-              Tipo de etiqueta:
-            </h2>
             <h2 className="mt-2 font-semibold text-2xl text-center great-vibes-regular">
               Formal
             </h2>
           </section>
           <footer className="bg-black h-1/2 flex flex-col justify-center items-center p-8">
-            <p className="text-white text-center great-vibes-regular text-2xl">
+            <p className="text-white text-center text-2xl">
               Esperamos contar con tu participación en este gran día.
             </p>
-            <p className="text-white text-center great-vibes-regular mt-4 text-2xl">
+            <p className="text-white text-center mt-4 text-1xl">
               Cualquier información adicional con respecto a la boda, a
               continuación aparecen los numeros de contacto de los novios:
             </p>
-            <h6 className="text-white text-center great-vibes-regular mt-4 text-3xl">
-              Novio
-            </h6>
-            <h5 className="text-white great-vibes-regular text-center mt-2 text-2xl">
+            <h6 className="text-white text-center  mt-4 text-2xl">Novio</h6>
+            <h5 className="text-white  text-center mt-2 text-1xl">
               Celular: +57 310 415 7860
             </h5>
-            <h6 className="text-white text-center great-vibes-regular mt-4 text-3xl">
-              Novia
-            </h6>
-            <h5 className="text-white text-center great-vibes-regular mt-2 text-2xl">
+            <h6 className="text-white text-center  mt-4 text-2xl">Novia</h6>
+            <h5 className="text-white text-center  mt-2 text-1xl">
               Celular: +502 5595 9443
             </h5>
           </footer>
