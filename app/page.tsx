@@ -106,6 +106,9 @@ export default function Home() {
               </Button>
             </form>
           </section>
+          <p className="font-light mt-8 px-6 text-center text-slate-500 pb-4">
+            Te recomendamos ver la invitación desde un dispositivo movil.
+          </p>
         </section>
       ) : (
         <section>
@@ -138,13 +141,13 @@ export default function Home() {
           </section>
           {/* Secccion para un mensaje hacia los invitados */}
           <section
-            className="bg-white p-8 text-center"
+            className="bg-white p-8 text-center bg-[#275f7a] text-white"
             style={{ marginTop: "-20px" }}
           >
-            <h2 className="text-black font-bold text-3xl great-vibes-regular">
+            <h2 className="text-black font-bold text-3xl great-vibes-regular text-white">
               {info.mainName}
             </h2>
-            <p className="text-black text-justify pt-6">
+            <p className="text-black text-justify pt-6 text-white">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
               numquam accusantium porro nam aut nemo accusamus laborum animi
               autem quibusdam odit. Magni quaerat nesciunt culpa, nostrum amet
@@ -305,8 +308,8 @@ export default function Home() {
             </Link>
           </section>
           {/* Seccion para el contador de la boda */}
-          <section className="p-8 flex flex-col justify-center">
-            <h2 className="font-bold text-4xl great-vibes-regular text-black text-center">
+          <section className="p-8 flex flex-col justify-center bg-[#275f7a] text-white">
+            <h2 className="font-bold text-4xl great-vibes-regular text-black text-center text-white">
               Contador para el gran día.
             </h2>
             <div className="mt-12">
@@ -343,6 +346,27 @@ export default function Home() {
               Formal
             </h2>
           </section>
+          <footer className="bg-black h-1/2 flex flex-col justify-center items-center p-8">
+            <p className="text-white text-center great-vibes-regular text-2xl">
+              Esperamos contar con tu participación en este gran día.
+            </p>
+            <p className="text-white text-center great-vibes-regular mt-4 text-2xl">
+              Cualquier información adicional con respecto a la boda, a
+              continuación aparecen los numeros de contacto de los novios:
+            </p>
+            <h6 className="text-white text-center great-vibes-regular mt-4 text-3xl">
+              Novio
+            </h6>
+            <h5 className="text-white great-vibes-regular text-center mt-2 text-2xl">
+              Celular: +57 310 415 7860
+            </h5>
+            <h6 className="text-white text-center great-vibes-regular mt-4 text-3xl">
+              Novia
+            </h6>
+            <h5 className="text-white text-center great-vibes-regular mt-2 text-2xl">
+              Celular: +502 5595 9443
+            </h5>
+          </footer>
         </section>
       )}
       <Modal isOpen={isOpen} onOpenChange={onOpenChange} placement="center">
@@ -356,25 +380,6 @@ export default function Home() {
           </ModalBody>
         </ModalContent>
       </Modal>
-      <footer className="bg-black h-1/2 flex flex-col justify-center items-center p-8">
-        <p className="text-white text-center great-vibes-regular">
-          Esperamos contar con tu participación en este gran día.
-        </p>
-        <p className="text-white text-center great-vibes-regular mt-4">
-          Cualquier información adicional con respecto a la boda, a continuación
-          aparecen los numeros de contacto de los novios:
-        </p>
-        <h6 className="text-white text-center great-vibes-regular mt-4">
-          Novio
-        </h6>
-        <h5 className="text-white text-center mt-2">
-          Celular: +57 310 415 7860
-        </h5>
-        <h6 className="text-white text-center great-vibes-regular mt-4">
-          Novia
-        </h6>
-        <h5 className="text-white text-center mt-2">Celular: +502 5595 9443</h5>
-      </footer>
     </main>
   );
 }
