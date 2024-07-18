@@ -88,12 +88,6 @@ export default function Home() {
               onSubmit={handleSubmit}
               className="flex flex-col mt-8 w-full px-12"
             >
-              {/* <input
-                type="text"
-                id="code"
-                value={code}
-                onChange={(e) => setCode(e.target.value)}
-              /> */}
               <Input
                 type="text"
                 id="code"
@@ -162,8 +156,13 @@ export default function Home() {
             </h5>
             <h5 className="font-light mt-4 text-white mb-8">
               {info.codeToEnter == 8388
-                ? "Ohad Ben Osher, recuerda que tú leerás la Ketuvah. Así que prepara tu voz y ahí nos vemos."
+                ? "Ohad Ben Osher, recuerda que tú leerás la Ketuvah. Así que prepara tu voz y ahí nos vemos "
+                : info.codeToEnter == 4422
+                ? "Biniamin, recuerda que tú serás uno de los testigos de la boda. Te esperamos sin falta "
+                : info.codeToEnter == 6498
+                ? "Yissaḥar, recuerda que tú serás uno de los testigos de la boda. Te esperamos sin falta "
                 : ""}
+              <span>&#127867;</span>
             </h5>
             <Image
               src={FloralDividerBottom}
@@ -350,26 +349,31 @@ export default function Home() {
                 className=""
               />
             </div>
-            <h2 className="mt-2 font-semibold text-2xl text-center great-vibes-regular">
+            <h2 className="mt-8 font-semibold text-2xl text-center great-vibes-regular">
               Formal
             </h2>
           </section>
-          <footer className="bg-black h-1/2 flex flex-col justify-center items-center p-8">
-            <p className="text-white text-center text-2xl">
-              Esperamos contar con tu participación en este gran día.
-            </p>
-            <p className="text-white text-center mt-4 text-1xl">
+          <section className="p-8 flex flex-col justify-center bg-[#275f7a] text-white items-center">
+            <h2 className="font-bold text-4xl great-vibes-regular text-black text-center text-white">
+              Información
+            </h2>
+            <p className="text-white text-center mt-8 text-1xl">
               Cualquier información adicional con respecto a la boda, a
               continuación aparecen los numeros de contacto de los novios:
             </p>
-            <h6 className="text-white text-center  mt-4 text-2xl">Novio</h6>
-            <h5 className="text-white  text-center mt-2 text-1xl">
-              Celular: +57 310 415 7860
-            </h5>
-            <h6 className="text-white text-center  mt-4 text-2xl">Novia</h6>
-            <h5 className="text-white text-center  mt-2 text-1xl">
-              Celular: +502 5595 9443
-            </h5>
+            <div className="mt-8">
+              <h5 className="text-white  text-center mt-2 text-1xl">
+                Celular novio: +57 310 415 7860
+              </h5>
+              <h5 className="text-white text-center  mt-2 text-1xl">
+                Celular novia: +502 5595 9443
+              </h5>
+            </div>
+          </section>
+          <footer className="bg-black h-1/2 flex flex-col justify-center items-center p-8">
+            <p className="text-white text-center text-2xl great-vibes-regular">
+              Esperamos contar con tu participación en este gran día.
+            </p>
           </footer>
         </section>
       )}
