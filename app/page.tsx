@@ -155,14 +155,24 @@ export default function Home() {
               {info.guestsNumber > 1 ? "personas." : "persona."}
             </h5>
             <h5 className="font-light mt-4 text-white mb-8">
-              {info.codeToEnter == 8388
-                ? "Ohad Ben Osher, recuerda que tú leerás la Ketuvah. Así que prepara tu voz y ahí nos vemos "
-                : info.codeToEnter == 4422
-                ? "Biniamin, recuerda que tú serás uno de los testigos de la boda. Te esperamos sin falta "
-                : info.codeToEnter == 6498
-                ? "Yissaḥar, recuerda que tú serás uno de los testigos de la boda. Te esperamos sin falta "
-                : ""}
-              <span>&#127867;</span>
+              {info.codeToEnter == 8388 ? (
+                <span>
+                  Ohad Ben Osher, recuerda que tú leerás la Ketuvah. Así que
+                  prepara tu voz y ahí nos vemos &#127867;
+                </span>
+              ) : info.codeToEnter == 4422 ? (
+                <span>
+                  Biniamin, recuerda que tú serás uno de los testigos de la
+                  boda. Te esperamos sin falta &#127867;
+                </span>
+              ) : info.codeToEnter == 6498 ? (
+                <span>
+                  Yissaḥar, recuerda que tú serás uno de los testigos de la
+                  boda. Te esperamos sin falta &#127867;
+                </span>
+              ) : (
+                ""
+              )}
             </h5>
             <Image
               src={FloralDividerBottom}
