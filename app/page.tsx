@@ -123,10 +123,10 @@ export default function Home() {
                 </h3>
               </div>
               <div className="flex flex-col justify-center items-center">
-                <h1 className="font-bold text-5xl great-vibes-regular text-white">
+                <h1 className="font-bold text-6xl great-vibes-regular text-white">
                   Yosef & Keter
                 </h1>
-                <h2 className="font-normal text-4xl text-white great-vibes-regular">
+                <h2 className="font-normal text-5xl text-white great-vibes-regular">
                   05&middot;01&middot;2025
                 </h2>
               </div>
