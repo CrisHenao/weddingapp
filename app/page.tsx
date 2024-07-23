@@ -180,7 +180,7 @@ export default function Home() {
             />
           </section>
           {/* Seccion para la ubicacion del evento y el listado de precios que tendrá el Hotel para el día de la boda */}
-          <section className="w-full flex flex-col items-center mt-12 px-8 pb-12">
+          <section className="w-full flex flex-col items-center px-8 py-12 bg-white">
             <h1 className="font-bold text-4xl great-vibes-regular">
               Ubicación
             </h1>
@@ -224,17 +224,17 @@ export default function Home() {
             </div>
           </section>
           {/* Seccion para el tema del hospedaje */}
-          <section className="bg-white p-8">
+          <section className="p-8 bg-[#275f7a] text-white">
             <div className="flex flex-col gap-12">
-              <h2 className="font-bold text-4xl great-vibes-regular text-black text-center">
+              <h2 className="font-bold text-4xl great-vibes-regular text-center">
                 Informacion de Hospedaje
               </h2>
-              <p className="text-black">
+              <p className="">
                 Te recomendamos que te quedes en el Hotel, aquí estarás mas
                 comodo despues de la celebración.
               </p>
             </div>
-            <div className="mt-8">
+            <div className="mt-8 text-black">
               <Table>
                 <TableHeader>
                   <TableColumn>.</TableColumn>
@@ -258,29 +258,9 @@ export default function Home() {
                     <TableCell>NA</TableCell>
                     <TableCell>NA</TableCell>
                   </TableRow>
-                  {/* <TableRow key="1">
-                    <TableCell>Estándar</TableCell>
-                    <TableCell>Junior Suite</TableCell>
-                  </TableRow>
-                  <TableRow key="2">
-                    <TableCell>$270.000</TableCell>
-                    <TableCell>$328.000</TableCell>
-                  </TableRow>
-                  <TableRow key="3">
-                    <TableCell>$309.000</TableCell>
-                    <TableCell>$391.000</TableCell>
-                  </TableRow>
-                  <TableRow key="4">
-                    <TableCell>$359.500</TableCell>
-                    <TableCell>NA</TableCell>
-                  </TableRow>
-                  <TableRow key="5">
-                    <TableCell>$479.000</TableCell>
-                    <TableCell>NA</TableCell>
-                  </TableRow> */}
                 </TableBody>
               </Table>
-              <p className="font-light mt-4 text-center">
+              <p className="font-light mt-4 text-center text-white">
                 <strong>Incluye:</strong> desayuno en la terraza de la piscina.
                 Disfrutar de los servicios del Hotel, piscina semiolímpica,{" "}
                 <strong>Nota:</strong> SPA y salón de belleza (costo adicional).
@@ -302,6 +282,12 @@ export default function Home() {
               <h4>Teléfono: +57 2 2362611</h4>
               <h4>Celular: +57 317 638 8417</h4>
               <h4>Email: reservas@hotelguadalajara.com.co</h4>
+            </div>
+            <div className="w-full mt-12 mb-8 flex justify-center align-center">
+              <Image
+                src={FloralDividerBottom}
+                alt="Divisor con imagen de flores"
+              />
             </div>
           </section>
           {/* Seccion para la parte de la confirmacion de la boda */}
@@ -360,7 +346,7 @@ export default function Home() {
               />
             </div>
             <h2 className="mt-8 font-semibold text-2xl text-center great-vibes-regular">
-              Formal
+              Formal, no estampados.
             </h2>
           </section>
           <section className="p-8 flex flex-col justify-center bg-[#275f7a] text-white items-center">
@@ -371,7 +357,7 @@ export default function Home() {
               Cualquier información adicional con respecto a la boda, a
               continuación aparecen los numeros de contacto de los novios:
             </p>
-            <div className="mt-8">
+            <div className="mt-8 mb-8">
               <h5 className="text-white  text-center mt-2 text-1xl">
                 Celular novio: +57 310 415 7860
               </h5>
@@ -379,6 +365,10 @@ export default function Home() {
                 Celular novia: +502 5595 9443
               </h5>
             </div>
+            <Image
+              src={FloralDividerBottom}
+              alt="Divisor con imagen de flores"
+            />
           </section>
           <footer className="bg-black h-1/2 flex flex-col justify-center items-center p-8">
             <p className="text-white text-center text-2xl great-vibes-regular">
