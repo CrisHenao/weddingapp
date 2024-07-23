@@ -233,7 +233,7 @@ export default function Home() {
                 cómodo antes y después de la celebración. <br />
                 <br />
                 <strong>Nota:</strong> No es obligatorio que así sea, pero sería
-                lindo que el día después de la boda pudiéramos juntarnos y
+                lindo que el día después de la boda pudiéramos reunirnos y
                 disfrutar juntos de nuestro primer desayuno como esposos.
               </p>
             </div>
@@ -263,6 +263,9 @@ export default function Home() {
                   </TableRow>
                 </TableBody>
               </Table>
+              <div className="my-4">
+                <p>*Tarifa en moneda local</p>
+              </div>
               <p className="font-light mt-4 text-center text-white">
                 <strong>Incluye:</strong> desayuno en la terraza de la piscina.
                 Disfrutar de los servicios del Hotel, piscina semiolímpica,{" "}
@@ -285,6 +288,10 @@ export default function Home() {
               <h4>Teléfono: +57 2 2362611</h4>
               <h4>Celular: +57 317 638 8417</h4>
               <h4>Email: reservas@hotelguadalajara.com.co</h4>
+              <p><strong>Nota: </strong>Si eres del extranjero recuerda solicitar la tarifa de hospedaje en dólares.</p>
+            </div>
+            <div className="text-center mt-8">
+              <p>Por favor toma en consideración que la fecha de la boda es temporada alta para hospedaje, por lo que entre más pronto reserves podrás asegurar tu lugar en el hotel.</p>
             </div>
             <div className="w-full mt-12 mb-8 flex justify-center align-center">
               <Image
@@ -300,7 +307,7 @@ export default function Home() {
             </h2>
             <p className="mt-8 text-center font-light">
               Para nosotros es muy importante que confirmes esta invitación,
-              para saber si contamos con tu especial compañía.
+              para saber si contamos con tu especial compañía. Agradecemos que nos confirmes tu asistencia antes e incluso del 2 de Diciembre de 2024.
             </p>
             <Link
               href="https://forms.gle/ojutY3tup1bzSHNp8"
