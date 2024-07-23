@@ -263,7 +263,7 @@ export default function Home() {
                   </TableRow>
                 </TableBody>
               </Table>
-              <div className="my-4">
+              <div className="my-4 text-white text-center">
                 <p>*Tarifa en moneda local</p>
               </div>
               <p className="font-light mt-4 text-center text-white">
