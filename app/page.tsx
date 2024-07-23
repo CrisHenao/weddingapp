@@ -118,7 +118,7 @@ export default function Home() {
               className="h-screen w-full flex flex-col items-center justify-between"
             >
               <div className="mt-4">
-                <h3 className="font-semibold text-2xl text-white great-vibes-regular">
+                <h3 className="font-semibold text-3xl text-white great-vibes-regular">
                   Nos casamos
                 </h3>
               </div>
@@ -144,11 +144,10 @@ export default function Home() {
             <h2 className="text-black font-bold text-3xl great-vibes-regular text-white mt-8">
               {info.mainName}
             </h2>
-            <p className="text-black text-justify pt-6 text-white">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
-              numquam accusantium porro nam aut nemo accusamus laborum animi
-              autem quibusdam odit. Magni quaerat nesciunt culpa, nostrum amet
-              excepturi quo tempore.
+            <p className="text-black text-center pt-6 text-white">
+              Tenemos el placer y honor de hacerlos partícipes de uno de los
+              días más especiales de nuestras vidas. Esperamos que puedan
+              acompañarnos y compartir la alegría de esta gran celebración.
             </p>
             <h5 className="font-semibold mt-4">
               Invitación válida para {info.guestsNumber}{" "}
@@ -230,8 +229,12 @@ export default function Home() {
                 Informacion de Hospedaje
               </h2>
               <p className="">
-                Te recomendamos que te quedes en el Hotel, aquí estarás mas
-                comodo despues de la celebración.
+                Te recomendamos que te quedes en el hotel, aquí estarás más
+                cómodo antes y después de la celebración. <br />
+                <br />
+                <strong>Nota:</strong> No es obligatorio que así sea, pero sería
+                lindo que el día después de la boda pudiéramos juntarnos y
+                disfrutar juntos de nuestro primer desayuno como esposos.
               </p>
             </div>
             <div className="mt-8 text-black">
@@ -355,7 +358,7 @@ export default function Home() {
             </h2>
             <p className="text-white text-center mt-8 text-1xl">
               Cualquier información adicional con respecto a la boda, a
-              continuación aparecen los numeros de contacto de los novios:
+              continuación aparecen los números de contacto de los novios:
             </p>
             <div className="mt-8 mb-8">
               <h5 className="text-white  text-center mt-2 text-1xl">
