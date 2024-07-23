@@ -118,15 +118,15 @@ export default function Home() {
               className="h-screen w-full flex flex-col items-center justify-between"
             >
               <div className="mt-4">
-                <h3 className="font-semibold text-3xl text-white great-vibes-regular">
-                  Nos casamos
+                <h3 className="font-semibold text-4xl text-white great-vibes-regular">
+                  ¡ Nos casamos !
                 </h3>
               </div>
               <div className="flex flex-col justify-center items-center">
                 <h1 className="font-bold text-5xl great-vibes-regular text-white">
                   Yosef & Keter
                 </h1>
-                <h2 className="font-normal text-4xl text-white">
+                <h2 className="font-normal text-4xl text-white great-vibes-regular">
                   05&middot;01&middot;2025
                 </h2>
               </div>
@@ -226,7 +226,7 @@ export default function Home() {
           <section className="p-8 bg-[#275f7a] text-white">
             <div className="flex flex-col gap-12">
               <h2 className="font-bold text-4xl great-vibes-regular text-center">
-                Informacion de Hospedaje
+                Información de Hospedaje
               </h2>
               <p className="">
                 Te recomendamos que te quedes en el hotel, aquí estarás más
