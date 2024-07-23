@@ -3,7 +3,7 @@
 import { url } from "inspector";
 import Image from "next/image";
 import { Parallax } from "react-scroll-parallax";
-import BgMain from "../public/images/mainphoto.jpg";
+import BgMain from "../public/images/mainphotoazul.png";
 import BgInvitation from "../public/images/invitationimage.jpg";
 import BugaHotel from "../public/images/hotelbuga.jpg";
 import DressCodeMan from "../public/images/etiquetaformalman.png";
