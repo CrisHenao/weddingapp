@@ -9,8 +9,8 @@ export const invitaciones: Invitacion[] = [
   { id: 1, mainName: "Sra. Avivah", guestsNumber: 1, codeToEnter: 5632 },
   {
     id: 2,
-    mainName: "Sr. Evelio Henao y Esposa",
-    guestsNumber: 2,
+    mainName: "Sr. Evelio Henao y familia",
+    guestsNumber: 3,
     codeToEnter: 8960,
   },
   {
