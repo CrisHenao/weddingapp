@@ -372,4 +372,22 @@ export const invitaciones: Invitacion[] = [
     codeToEnter: 5821,
   },
   { id: 81, mainName: "Srita. Ahuvati.", guestsNumber: 1, codeToEnter: 5493 },
+  {
+    id: 82,
+    mainName: "Sr. Carlos Henao, Esposa e hijo.",
+    guestsNumber: 3,
+    codeToEnter: 2730,
+  },
+  {
+    id: 83,
+    mainName: "Sr. Jorge García y Srita. Bárbara Bol.",
+    guestsNumber: 2,
+    codeToEnter: 8412,
+  },
+  {
+    id: 84,
+    mainName: "Sr. Jonathan Bol y Srita. Fernanda Marroquín.",
+    guestsNumber: 2,
+    codeToEnter: 8652,
+  },
 ];

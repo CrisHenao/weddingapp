@@ -118,12 +118,12 @@ export default function Home() {
               className="h-screen w-full flex flex-col items-center justify-between"
             >
               <div className="mt-4">
-                <h3 className="font-semibold text-4xl text-white great-vibes-regular">
+                <h3 className="font-bold text-4xl text-white great-vibes-regular">
                   ¡ Nos casamos !
                 </h3>
               </div>
               <div className="flex flex-col justify-center items-center">
-                <h1 className="font-bold text-6xl great-vibes-regular text-white">
+                <h1 className="font-bold text-6xl great-vibes-regular text-white text-center">
                   Yosef & Keter
                 </h1>
                 <h2 className="font-normal text-5xl text-white great-vibes-regular">
@@ -145,13 +145,62 @@ export default function Home() {
               {info.mainName}
             </h2>
             <p className="text-black text-center pt-6 text-white">
-              Tenemos el placer y honor de hacerlos partícipes de uno de los
-              días más especiales de nuestras vidas. Esperamos que puedan
-              acompañarnos y compartir la alegría de esta gran celebración.
+              {info.codeToEnter == 7945 ? (
+                <span>
+                  <strong>Papito</strong> <br />
+                  ¡Eres invitado de honor, eres el Papá de la Novia! <br />
+                  <br />
+                  Agradezco al Creador del Universo por tu preciada vida, porque
+                  gracias a tu existencia mi vida pudo ser en esta tierra y
+                  ahora con tu exaltación tengo el privilegio de formar mi
+                  propio hogar junto a Yosef. <br />
+                  <br />
+                  Te amo, eres mi Papito, mi primer amor y seré por siempre tu
+                  Osita.
+                </span>
+              ) : info.codeToEnter == 2318 ? (
+                <span>
+                  <strong>Mamita</strong> <br /> ¡Eres invitada de honor, eres
+                  la mamá de la novia! <br />
+                  <br />
+                  Gracias al Creador por tu hermosa existencia y haberme dado
+                  vida a través de ti, gracias por tu amor y darme lo mejor de
+                  ti para que hoy pueda tener el privilegio de iniciar esta
+                  nueva etapa. <br />
+                  <br />
+                  Te amo mamá de mi corazón, mi reinita. ¡Gracias por ser parte
+                  de mi alegría!
+                </span>
+              ) : info.codeToEnter == 2730 ? (
+                <span>
+                  <strong>Amados padres.</strong> En este momento de mi vida doy
+                  gracias a su majestad YAHVEH por darme el privilegio de
+                  tenerlos como padres, de poder recibir de ustedes los consejos
+                  pertinentes y correctos para que mi vida sea moldeada y esté
+                  camino a contraer matrimonio con la mujer que he escogido para
+                  mi vida. La mujer cuyos atributos no distan de los principios
+                  éticos y morales que ustedes me han dado. Ya pronto su pequeño
+                  hijo estará casado y esto será gracias a ustedes dos. Al
+                  pequeño Yitzhak le encomiendo la tarea de cuidar de ustedes en
+                  el amor y la honra que nos han enseñado a darles. De ser ese
+                  bastón en la vejez. Nunca dejaré de preocuparme por ustedes,
+                  por más lejos o cerca que esté. Serán una de mis prioridades
+                  junto con mi hermanito. <br />
+                  <strong>Los amo, y nos vemos en la boda.</strong>
+                </span>
+              ) : (
+                "Tenemos el placer y honor de hacerlos partícipes de uno de los días más especiales de nuestras vidas. Esperamos que puedan acompañarnos y compartir la alegría de esta gran celebración."
+              )}
             </p>
             <h5 className="font-semibold mt-4">
-              Invitación válida para {info.guestsNumber}{" "}
-              {info.guestsNumber > 1 ? "personas." : "persona."}
+              {info.codeToEnter == 2318 || info.codeToEnter == 7945 ? (
+                ""
+              ) : (
+                <span>
+                  Invitación válida para {info.guestsNumber}{" "}
+                  {info.guestsNumber > 1 ? "personas." : "persona."}
+                </span>
+              )}
             </h5>
             <h5 className="font-light mt-4 text-white mb-8">
               {info.codeToEnter == 8388 ? (
@@ -288,10 +337,17 @@ export default function Home() {
               <h4>Teléfono: +57 2 2362611</h4>
               <h4>Celular: +57 317 638 8417</h4>
               <h4>Email: reservas@hotelguadalajara.com.co</h4>
-              <p><strong>Nota: </strong>Si eres del extranjero recuerda solicitar la tarifa de hospedaje en dólares.</p>
+              <p>
+                <strong>Nota: </strong>Si eres del extranjero recuerda solicitar
+                la tarifa de hospedaje en dólares.
+              </p>
             </div>
             <div className="text-center mt-8">
-              <p>Por favor toma en consideración que la fecha de la boda es temporada alta para hospedaje, por lo que entre más pronto reserves podrás asegurar tu lugar en el hotel.</p>
+              <p>
+                Por favor toma en consideración que la fecha de la boda es
+                temporada alta para hospedaje, por lo que entre más pronto
+                reserves podrás asegurar tu lugar en el hotel.
+              </p>
             </div>
             <div className="w-full mt-12 mb-8 flex justify-center align-center">
               <Image
@@ -307,7 +363,9 @@ export default function Home() {
             </h2>
             <p className="mt-8 text-center font-light">
               Para nosotros es muy importante que confirmes esta invitación,
-              para saber si contamos con tu especial compañía. Agradecemos que nos confirmes tu asistencia antes e incluso del 2 de Diciembre de 2024.
+              para saber si contamos con tu especial compañía. Agradecemos que
+              nos confirmes tu asistencia antes e incluso del 2 de Diciembre de
+              2024.
             </p>
             <Link
               href="https://forms.gle/ojutY3tup1bzSHNp8"
