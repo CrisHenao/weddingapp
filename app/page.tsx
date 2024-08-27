@@ -340,6 +340,20 @@ export default function Home() {
               <p>
                 <strong>Nota: </strong>Si eres del extranjero recuerda solicitar
                 la tarifa de hospedaje en dólares.
+                <br />
+                <br />
+                <strong>
+                  Puedes descargar la información de hospedaje con las tarifas
+                  en dólares en el siguiente link:
+                </strong>
+                <br />
+                <a
+                  href="https://drive.google.com/file/d/1GVbfNbVbOTHQyLF953Gbt59vMwgn7Lnz/view?usp=sharing"
+                  target="_blank"
+                  style={{ textDecoration: "underline" }}
+                >
+                  Descargar información
+                </a>
               </p>
             </div>
             <div className="text-center mt-8">

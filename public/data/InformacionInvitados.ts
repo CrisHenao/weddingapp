@@ -470,7 +470,7 @@ export const invitaciones: Invitacion[] = [
   },
   {
     id: 98,
-    mainName: "Sra. Yovana e hija.",
+    mainName: "Sra. Yovanna e hija.",
     guestsNumber: 2,
     codeToEnter: 3078,
   },
