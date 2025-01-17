@@ -492,4 +492,16 @@ export const invitaciones: Invitacion[] = [
     guestsNumber: 5,
     codeToEnter: 6763,
   },
+  {
+    id: 102,
+    mainName: "Sr. Óscar Sicán y Fam.",
+    guestsNumber: 3,
+    codeToEnter: 1002,
+  },
+  {
+    id: 103,
+    mainName: "Sr. Azriel.",
+    guestsNumber: 1,
+    codeToEnter: 1007,
+  },
 ];

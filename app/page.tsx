@@ -127,7 +127,7 @@ export default function Home() {
                   Yosef & Keter
                 </h1>
                 <h2 className="font-normal text-5xl text-white great-vibes-regular">
-                  05&middot;01&middot;2025
+                  26&middot;01&middot;2025
                 </h2>
               </div>
               <div>
@@ -397,7 +397,7 @@ export default function Home() {
               Contador para el gran día.
             </h2>
             <div className="mt-12 mb-8">
-              <Countdown targetDate="2025-01-05T16:59:59" />
+              <Countdown targetDate="2025-01-26T16:59:59" />
             </div>
             <Image
               src={FloralDividerBottom}
